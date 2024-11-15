@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <img src="/public/images/uem_logo.png" alt="University Logo" className="footer-logo" />
+          <img src="/images/uem_logo.png" alt="University Logo" className="footer-logo" />
           <p className="footer-info">&copy; {new Date().getFullYear()} Tech-bROS by UEM Robotics Club. All rights reserved.</p>
         </div>
         <div className="footer-social">
