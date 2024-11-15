@@ -11,7 +11,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* Cambia a BrowserRouter con basename */}
+      <Router basename="/techbrosweb.github.io">
         <Navbar />
         <Routes>
           <Route path="/" element={
