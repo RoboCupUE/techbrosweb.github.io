@@ -9,25 +9,25 @@ const PublicitySection = () => {
   const slides = [
     {
       type: 'image',
-      src: '/images/NaosRobotics.jpg',
+      src: '/public/images/NaosRobotics.jpg',
       alt: 'Advertisement 1',
       caption: 'Explore our latest robotics products.'
     },
     {
       type: 'image',
-      src: '/images/ROS2_Clases.jpg',
+      src: '/public/images/ROS2_Clases.jpg',
       alt: 'Advertisement 2',
       caption: 'Watch how we build the future of technology.'
     },
     {
       type: 'video',
-      src: '/images/Nao_Video.mp4',
+      src: '/public/images/Nao_Video.mp4',
       alt: 'Advertisement 3',
       caption: 'Join our robotics club and innovate with us.'
     },
     {
       type: 'image',
-      src: '/images/ASTI_Podium.jpg',
+      src: '/public/images/ASTI_Podium.jpg',
       alt: 'Advertisement 4',
       caption: 'Be one of us and solve great challenges in renowned competitions.'
     }
