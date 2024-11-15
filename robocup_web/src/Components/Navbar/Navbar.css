@@ -1,0 +1,109 @@
+.navbar {
+    background-color: #ff5757;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior de la pantalla */
+    left: 0; /* Alineación completa a la izquierda */
+    width: 100%; /* Hace que el navbar ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el navbar esté sobre otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra para el efecto flotante */
+}
+
+/* Asegura que el contenido no se superponga al navbar fijo */
+body {
+    padding-top: 60px; /* Ajusta el padding según el tamaño de la navbar */
+}
+
+/* Contenedor del navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo del navbar */
+.navbar-logo-img {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilo de los enlaces del navbar para pantallas grandes */
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Estilo de los botones */
+.navbar-button {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.navbar-button:hover {
+    background-color: #ff3838;
+}
+
+.navbar-button:active {
+    background-color: #e03e3e;
+}
+
+/* Estilo para el menú hamburguesa (oculto en pantallas grandes) */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(255, 87, 87, 0.9); /* Color coral con opacidad */
+        position: absolute;
+        top: 100%; /* Justo debajo de la barra de navegación */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para efecto luminoso */
+        z-index: 999;
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex; /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+    }
+
+    .navbar-button {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        color: white;
+    }
+
+    .navbar-button:hover {
+        background-color: rgba(255, 99, 71, 0.8); /* Coral más claro con efecto de luminosidad */
+    }
+}

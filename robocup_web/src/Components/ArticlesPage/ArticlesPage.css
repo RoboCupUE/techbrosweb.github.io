@@ -1,0 +1,78 @@
+.articles-page {
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .articles-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .article-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .article-title {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .article-title:hover {
+    color: #ff5757;
+  }
+  
+  .article-summary {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .article-author-year {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  .article-author-year .article-author {
+    font-weight: bold;
+  }
+  
+  .article-author-year .article-year {
+    color: #555;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .page-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .page-btn:hover {
+    background-color: #ff5757;
+    color: #fff;
+  }
+  
+  .page-btn.active {
+    background-color: #ff5757;
+    color: white;
+    font-weight: bold;
+  }
+  

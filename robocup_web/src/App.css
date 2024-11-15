@@ -1,0 +1,41 @@
+/* Asegúrate de que el contenedor principal ocupe toda la altura de la ventana */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Contenedor principal para la aplicación */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Ocupa toda la altura de la pantalla */
+  justify-content: flex-start;
+}
+
+/* La sección del header o contenido principal (ejemplo: HeroSection, CardsSection) */
+.App-header {
+  background-color: #282c34;
+  flex-grow: 1;  /* Hace que la sección de contenido ocupe todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* El logo de la app */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Los enlaces */
+.App-link {
+  color: #61dafb;
+}
+
+/* Asegúrate de que el footer siempre esté al final */
+footer {
+  margin-top: auto; /* Empuja el footer al fondo */
+}
