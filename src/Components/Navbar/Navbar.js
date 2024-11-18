@@ -32,7 +32,7 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <img 
-            src="/images/RobocupLogoWeb.png" 
+            src="./images/RobocupLogoWeb.png" 
             alt="Logo"
             className="navbar-logo-img" 
           />
