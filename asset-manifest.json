@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/techbrosweb.github.io/static/css/main.aae8d608.css",
-    "main.js": "/techbrosweb.github.io/static/js/main.9a7a214b.js",
+    "main.js": "/techbrosweb.github.io/static/js/main.8390e646.js",
     "static/media/HeroSection_img.jpg": "/techbrosweb.github.io/static/media/HeroSection_img.f7b2287570a5db1c242e.jpg",
     "index.html": "/techbrosweb.github.io/index.html",
     "main.aae8d608.css.map": "/techbrosweb.github.io/static/css/main.aae8d608.css.map",
-    "main.9a7a214b.js.map": "/techbrosweb.github.io/static/js/main.9a7a214b.js.map"
+    "main.8390e646.js.map": "/techbrosweb.github.io/static/js/main.8390e646.js.map"
   },
   "entrypoints": [
     "static/css/main.aae8d608.css",
-    "static/js/main.9a7a214b.js"
+    "static/js/main.8390e646.js"
   ]
 }
