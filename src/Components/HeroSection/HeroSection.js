@@ -1,5 +1,6 @@
 import React from 'react';
-import './HeroSection.css'; 
+import { Link } from 'react-router-dom';  // Importa Link
+import './HeroSection.css';
 
 function HeroSection() {
   return (
@@ -7,13 +8,13 @@ function HeroSection() {
       <div className='hero-overlay'>
         <h1 className='hero-title'>Tech-bROS in the Robotics Club</h1>
         <p className='hero-description'>
-            We are a team focused on robotics, combining research, development, 
-            and a variety of activities within our university's Robotics club. 
-            In addition to cutting-edge research, we design projects and participate in robotics competitions, 
-            fostering creativity, collaboration, and innovation among our university members.
+          We are a team focused on robotics, combining research, development, 
+          and a variety of activities within our university's Robotics club. 
+          In addition to cutting-edge research, we design projects and participate in robotics competitions, 
+          fostering creativity, collaboration, and innovation among our university members.
         </p>
         <div className='hero-buttons'>
-          <a href='/projects' className='hero-button'>Featured Projects</a>
+          <Link to='/featured-projects' className='hero-button'>Featured Projects</Link> {/* Usamos Link en lugar de <a> */}
         </div>
       </div>
     </div>

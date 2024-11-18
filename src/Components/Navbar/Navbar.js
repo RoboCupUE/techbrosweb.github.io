@@ -48,6 +48,11 @@ function Navbar() {
             <Link to="/articles" className="navbar-button" onClick={() => setIsOpen(false)}>Articles</Link>
           )}
 
+          {/* Mostrar botón "Articles" solo si no estamos en la página de artículos */}
+          {location.pathname !== '/featured-projects' && (
+            <Link to="/featured-projects" className="navbar-button" onClick={() => setIsOpen(false)}>Projects</Link>
+          )}
+
           {/* Mostrar botón "Videos" solo si no estamos en la página de videos */}
           {location.pathname !== '/videos' && (
             <Link to="/videos" className="navbar-button" onClick={() => setIsOpen(false)}>Videos</Link>
