@@ -3,6 +3,7 @@ import './PublicitySection.css';
 
 const PublicitySection = React.memo(() => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState([]);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const slides = [
@@ -28,29 +29,42 @@ const PublicitySection = React.memo(() => {
       type: 'image',
       src: './images/ASTI_Podium.jpg',
       alt: 'Advertisement 4',
-      caption: 'Be part of us and solve great challenges in recognized competitions.'
+      caption: 'Be part of us and solve big challenges in recognized competitions.'
     }
   ];
 
   // Preload images
   const preloadImages = useCallback(() => {
-    slides.forEach((slide) => {
-      if (slide.type === 'image') {
-        const img = new Image();
-        img.src = slide.src; // Force the image to load
-      }
+    const promises = slides.map((slide) => {
+      return new Promise((resolve, reject) => {
+        if (slide.type === 'image') {
+          const img = new Image();
+          img.src = slide.src;
+          img.onload = () => resolve(slide.src); // Resolve when image is loaded
+          img.onerror = () => reject(new Error(`Failed to load image: ${slide.src}`)); // Error handling
+        }
+      });
     });
+
+    // Wait for all images to preload
+    Promise.all(promises)
+      .then((loadedImages) => {
+        setLoadedImages(loadedImages); // Save loaded images
+      })
+      .catch((error) => {
+        console.error("Error loading images", error);
+      });
   }, [slides]);
 
   useEffect(() => {
-    preloadImages(); 
+    preloadImages();
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      setImageLoaded(false); 
+      setImageLoaded(false); // Reset image loaded state
     }, 7000);
 
-    return () => clearInterval(interval); 
-  }, [preloadImages]);
+    return () => clearInterval(interval); // Clean up interval
+  }, [slides.length, preloadImages]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -66,7 +80,7 @@ const PublicitySection = React.memo(() => {
               alt={slides[currentIndex].alt}
               className={`publicity-image ${imageLoaded ? 'loaded' : 'loading'}`}
               onLoad={handleImageLoad}
-              style={{ display: imageLoaded ? 'block' : 'none' }} // Hide the image until it has loaded
+              style={{ display: imageLoaded ? 'block' : 'none' }} // Hide image until loaded
             />
           ) : (
             <video className="publicity-video" autoPlay loop muted>
