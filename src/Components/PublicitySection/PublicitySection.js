@@ -3,7 +3,6 @@ import './PublicitySection.css';
 
 const PublicitySection = React.memo(() => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loadedImages, setLoadedImages] = useState([]);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const slides = [
@@ -36,25 +35,22 @@ const PublicitySection = React.memo(() => {
   // Precargar imágenes
   const preloadImages = useCallback(() => {
     slides.forEach((slide) => {
-      if (slide.type === 'image' && !loadedImages.includes(slide.src)) {
+      if (slide.type === 'image') {
         const img = new Image();
-        img.src = slide.src;
-        img.onload = () => {
-          setLoadedImages((prev) => [...prev, slide.src]);
-        };
+        img.src = slide.src; // Forzar la carga de la imagen
       }
     });
-  }, [loadedImages, slides]);
+  }, [slides]);
 
   useEffect(() => {
-    preloadImages(); // Precargar imágenes solo una vez
+    preloadImages(); 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      setImageLoaded(false); // Reiniciar la bandera de carga de imágenes
+      setImageLoaded(false); 
     }, 7000);
 
-    return () => clearInterval(interval); // Limpiar el intervalo al desmontar el componente
-  }, [slides.length, preloadImages]);
+    return () => clearInterval(interval); 
+  }, [preloadImages])
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -70,6 +66,7 @@ const PublicitySection = React.memo(() => {
               alt={slides[currentIndex].alt}
               className={`publicity-image ${imageLoaded ? 'loaded' : 'loading'}`}
               onLoad={handleImageLoad}
+              style={{ display: imageLoaded ? 'block' : 'none' }} // Ocultar la imagen hasta que se haya cargado
             />
           ) : (
             <video className="publicity-video" autoPlay loop muted>
