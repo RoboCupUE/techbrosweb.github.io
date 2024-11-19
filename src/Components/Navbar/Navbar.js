@@ -27,6 +27,12 @@ function Navbar() {
     }
   }, [isOpen]);
 
+  // Función para recargar la página cuando el usuario haga clic en "Home"
+  const handleHomeClick = () => {
+    window.location.reload(); // Forzar recarga de la página
+    setIsOpen(false); // Cerrar el menú al hacer clic
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -38,9 +44,15 @@ function Navbar() {
           />
         </Link>
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
-          {/* Mostrar botón "Home" solo si no estamos en la página principal */}
+          {/* Mostrar botón "Home" y recargar la página al hacer clic */}
           {location.pathname !== '/' && (
-            <Link to="/" className="navbar-button" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link 
+              to="/" 
+              className="navbar-button" 
+              onClick={handleHomeClick} // Recargar la página al hacer clic
+            >
+              Home
+            </Link>
           )}
           
           {/* Mostrar botón "Articles" solo si no estamos en la página de artículos */}
@@ -48,7 +60,7 @@ function Navbar() {
             <Link to="/articles" className="navbar-button" onClick={() => setIsOpen(false)}>Articles</Link>
           )}
 
-          {/* Mostrar botón "Articles" solo si no estamos en la página de artículos */}
+          {/* Mostrar botón "Projects" solo si no estamos en la página de proyectos */}
           {location.pathname !== '/featured-projects' && (
             <Link to="/featured-projects" className="navbar-button" onClick={() => setIsOpen(false)}>Projects</Link>
           )}
