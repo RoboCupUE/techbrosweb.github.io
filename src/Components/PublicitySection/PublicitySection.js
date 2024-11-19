@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './PublicitySection.css';
 
 const PublicitySection = React.memo(() => {
@@ -33,9 +33,9 @@ const PublicitySection = React.memo(() => {
     }
   ];
 
-  // Precarga de imágenes
-  const preloadImages = () => {
-    slides.forEach(slide => {
+  // Precargar imágenes
+  const preloadImages = useCallback(() => {
+    slides.forEach((slide) => {
       if (slide.type === 'image' && !loadedImages.includes(slide.src)) {
         const img = new Image();
         img.src = slide.src;
@@ -44,7 +44,7 @@ const PublicitySection = React.memo(() => {
         };
       }
     });
-  };
+  }, [loadedImages, slides]);
 
   useEffect(() => {
     preloadImages(); // Precargar imágenes solo una vez
@@ -54,7 +54,7 @@ const PublicitySection = React.memo(() => {
     }, 7000);
 
     return () => clearInterval(interval); // Limpiar el intervalo al desmontar el componente
-  }, [slides.length]);
+  }, [slides.length, preloadImages]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -77,6 +77,7 @@ const PublicitySection = React.memo(() => {
               Tu navegador no soporta el elemento de video.
             </video>
           )}
+          {!imageLoaded && <div className="loading-spinner">Cargando...</div>}
         </div>
         <div className="publicity-caption">
           <p>{slides[currentIndex].caption}</p>
