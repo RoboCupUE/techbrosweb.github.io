@@ -9,25 +9,25 @@ const PublicitySection = React.memo(() => {
   const slides = [
     {
       type: 'image',
-      src: './images/NaosRobotics.jpg',
+      src: '/images/NaosRobotics.jpg',
       alt: 'Advertisement 1',
       caption: 'Explora nuestros últimos productos de robótica.'
     },
     {
       type: 'image',
-      src: './images/ROS2_Clases.jpg',
+      src: '/images/ROS2_Clases.jpg',
       alt: 'Advertisement 2',
       caption: 'Mira cómo construimos el futuro de la tecnología.'
     },
     {
       type: 'video',
-      src: './images/Nao_Video.mp4',
+      src: '/images/Nao_Video.mp4',
       alt: 'Advertisement 3',
       caption: 'Únete a nuestro club de robótica e innova con nosotros.'
     },
     {
       type: 'image',
-      src: './images/ASTI_Podium.jpg',
+      src: '/images/ASTI_Podium.jpg',
       alt: 'Advertisement 4',
       caption: 'Sé parte de nosotros y resuelve grandes desafíos en competiciones reconocidas.'
     }
