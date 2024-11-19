@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Importa useLocation
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './Navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation(); // Hook para obtener la ruta actual
+  const navigate = useNavigate(); // Hook para navegar programáticamente
 
   // Función para alternar el menú hamburguesa
   const toggleMenu = () => {
@@ -29,6 +30,7 @@ function Navbar() {
 
   // Función para recargar la página cuando el usuario haga clic en "Home"
   const handleHomeClick = () => {
+    navigate('/'); // Navegar a la página de inicio
     window.location.reload(); // Forzar recarga de la página
     setIsOpen(false); // Cerrar el menú al hacer clic
   };
