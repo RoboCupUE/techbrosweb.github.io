@@ -60,3 +60,12 @@
     margin-bottom: 10px;
   }
   
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }

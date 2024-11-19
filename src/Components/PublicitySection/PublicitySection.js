@@ -8,36 +8,36 @@ const PublicitySection = React.memo(() => {
   const slides = [
     {
       type: 'image',
-      src: '/images/NaosRobotics.jpg',
+      src: './images/NaosRobotics.jpg',
       alt: 'Advertisement 1',
-      caption: 'Explora nuestros últimos productos de robótica.'
+      caption: 'Explore our latest robotics products.'
     },
     {
       type: 'image',
-      src: '/images/ROS2_Clases.jpg',
+      src: './images/ROS2_Clases.jpg',
       alt: 'Advertisement 2',
-      caption: 'Mira cómo construimos el futuro de la tecnología.'
+      caption: 'See how we are building the future of technology.'
     },
     {
       type: 'video',
-      src: '/images/Nao_Video.mp4',
+      src: './images/Nao_Video.mp4',
       alt: 'Advertisement 3',
-      caption: 'Únete a nuestro club de robótica e innova con nosotros.'
+      caption: 'Join our robotics club and innovate with us.'
     },
     {
       type: 'image',
-      src: '/images/ASTI_Podium.jpg',
+      src: './images/ASTI_Podium.jpg',
       alt: 'Advertisement 4',
-      caption: 'Sé parte de nosotros y resuelve grandes desafíos en competiciones reconocidas.'
+      caption: 'Be part of us and solve great challenges in recognized competitions.'
     }
   ];
 
-  // Precargar imágenes
+  // Preload images
   const preloadImages = useCallback(() => {
     slides.forEach((slide) => {
       if (slide.type === 'image') {
         const img = new Image();
-        img.src = slide.src; // Forzar la carga de la imagen
+        img.src = slide.src; // Force the image to load
       }
     });
   }, [slides]);
@@ -50,7 +50,7 @@ const PublicitySection = React.memo(() => {
     }, 7000);
 
     return () => clearInterval(interval); 
-  }, [preloadImages])
+  }, [preloadImages]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -66,15 +66,15 @@ const PublicitySection = React.memo(() => {
               alt={slides[currentIndex].alt}
               className={`publicity-image ${imageLoaded ? 'loaded' : 'loading'}`}
               onLoad={handleImageLoad}
-              style={{ display: imageLoaded ? 'block' : 'none' }} // Ocultar la imagen hasta que se haya cargado
+              style={{ display: imageLoaded ? 'block' : 'none' }} // Hide the image until it has loaded
             />
           ) : (
             <video className="publicity-video" autoPlay loop muted>
               <source src={slides[currentIndex].src} type="video/mp4" />
-              Tu navegador no soporta el elemento de video.
+              Your browser does not support the video element.
             </video>
           )}
-          {!imageLoaded && <div className="loading-spinner">Cargando...</div>}
+          {!imageLoaded && <div className="loading-spinner">Loading...</div>}
         </div>
         <div className="publicity-caption">
           <p>{slides[currentIndex].caption}</p>
