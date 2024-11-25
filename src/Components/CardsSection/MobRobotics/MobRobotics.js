@@ -27,10 +27,16 @@ const MobRobotics = () => {
           src="./images/robocup.jpg" 
           alt="Participants in a ROS2 mobile robotics workshop" 
         />
-        <img 
-          src="./images/kobuki.mp4" 
+        {/* Use the <video> tag for the video */}
+        <video 
+          controls
+          width="100%" 
+          height="auto"
           alt="Kobuki robot demonstration"
-        />
+        >
+          <source src="./images/kobuki.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <img 
           src="./images/kobuki.jpg" 
           alt="Participants working with the Kobuki robot"
