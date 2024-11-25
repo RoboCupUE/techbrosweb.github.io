@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/techbrosweb.github.io/static/css/main.c4433cc2.css",
-    "main.js": "/techbrosweb.github.io/static/js/main.883949c1.js",
+    "main.css": "/techbrosweb.github.io/static/css/main.b18e80a9.css",
+    "main.js": "/techbrosweb.github.io/static/js/main.9d9c2318.js",
     "static/media/robocup_team.jpg": "/techbrosweb.github.io/static/media/robocup_team.21a6d8e3d5730cce2c0f.jpg",
     "static/media/HeroSection_img.jpg": "/techbrosweb.github.io/static/media/HeroSection_img.f7b2287570a5db1c242e.jpg",
     "static/media/background.jpg": "/techbrosweb.github.io/static/media/background.cdd520c8b7a1c884d5b4.jpg",
     "index.html": "/techbrosweb.github.io/index.html",
-    "main.c4433cc2.css.map": "/techbrosweb.github.io/static/css/main.c4433cc2.css.map",
-    "main.883949c1.js.map": "/techbrosweb.github.io/static/js/main.883949c1.js.map"
+    "main.b18e80a9.css.map": "/techbrosweb.github.io/static/css/main.b18e80a9.css.map",
+    "main.9d9c2318.js.map": "/techbrosweb.github.io/static/js/main.9d9c2318.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4433cc2.css",
-    "static/js/main.883949c1.js"
+    "static/css/main.b18e80a9.css",
+    "static/js/main.9d9c2318.js"
   ]
 }
