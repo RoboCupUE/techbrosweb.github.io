@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -19,6 +19,9 @@ const Footer = () => {
           </a>
           <a href="mailto:clubroboticsuem@gmail.com" className="footer-icon">
             <FaEnvelope size={30} />
+          </a>
+          <a href="https://github.com/RoboCupUE" target="_blank" rel="noopener noreferrer" className="footer-icon">
+            <FaGithub size={30} />
           </a>
         </div>
       </div>

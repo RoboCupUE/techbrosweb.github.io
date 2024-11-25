@@ -47,14 +47,20 @@
   }
   
   .card-link {
-    font-size: 1rem;
+    display: inline-block;
+    padding: 6px 10px;
+    border: 2px solid #ff5757;
+    border-radius: 5px;
+    background-color: #ff5757;
+    color: #fff;
     text-decoration: none;
-    color: #ff5757;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .card-link:hover {
-    color: #ff3838;
+    background-color: #fff;
+    color: #ff5757;
   }
+  
   

@@ -2,34 +2,39 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 15px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
+/* Hero Section Styles */
 .hero-about-us {
-    text-align: center;
-    background: linear-gradient(
-    rgba(51, 51, 51, 0.6), 
-    rgba(51, 51, 51, 0.9)
-    ), url('/public/images/background.jpeg');
+    position: relative;
+    background: url('/public/images/robocup_team.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 40px 20px;
-    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
     border-radius: 8px;
-  }
-  
+}
 
 .hero-about-us h1 {
+    font-size: 48px;
     margin-bottom: 10px;
-    font-size: 36px;
 }
 
 .hero-about-us p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
+/* General Section Styles */
 .about-us-overview,
 .about-us-mission,
 .team-projects,
@@ -46,8 +51,20 @@
     margin-bottom: 15px;
     font-size: 28px;
     color: #ff5757;
+    margin-top: 15px;
 }
 
+/* Special Styles for Team Members Section Title */
+.team-members-title {
+    text-align: center;
+    background: #ff5757;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Team Projects */
 .team-projects ul {
     list-style-type: disc;
     margin: 10px 0 10px 20px;
@@ -74,7 +91,85 @@
     text-align: center;
 }
 
-.join-us-section p {
-    font-size: 16px;
-    margin-top: 15px;
+/* Team Members Cards */
+.team-members {
+    margin-bottom: 30px;
 }
+
+.member-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.member-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.member-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.member-card a {
+    color: #ff5757;
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-word; 
+    overflow-wrap: anywhere; 
+    display: inline-block; 
+}
+
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5757;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #ff3838;
+    transform: translateY(-2px);
+  }
+  
+  

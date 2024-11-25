@@ -1,4 +1,4 @@
-.featured-projects-page {
+.edu-robotics-page {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -8,67 +8,67 @@
     color: #333;
   }
   
-  .hero-featured-projects {
+  .hero-edu-robotics {
     text-align: center;
     background: linear-gradient(
-    rgba(51, 51, 51, 0.6), 
-    rgba(51, 51, 51, 0.9)
-    ), url('/public/images/background.jpg');
+      rgba(51, 51, 51, 0.6), 
+      rgba(51, 51, 51, 0.9)
+    );
     color: white;
     padding: 40px 20px;
     margin-bottom: 30px;
     border-radius: 8px;
   }
   
-  .hero-featured-projects h1 {
+  .hero-edu-robotics h1 {
     margin-bottom: 10px;
     font-size: 36px;
   }
   
-  .hero-featured-projects p {
+  .hero-edu-robotics p {
     font-size: 18px;
   }
   
-  .project-section {
+  .edu-section {
     margin-bottom: 50px;
   }
   
-  .project-section h2 {
+  .edu-section h2 {
     margin-bottom: 15px;
     font-size: 28px;
     color: #ff5757;
   }
   
-  .project-details {
+  .edu-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
   }
   
-  .project-description {
+  .edu-description {
     flex: 1;
     padding-right: 20px;
   }
   
-  .project-description p {
+  .edu-description p {
     font-size: 18px;
   }
   
-  .project-image {
+  .edu-image {
     flex: 1;
     text-align: center;
   }
   
-  .project-image img {
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor, pero sin exceder el 100% de su tamaño original */
-    height: auto; /* Mantiene la relación de aspecto original de la imagen */
-    max-width: 300px; /* Limita el ancho máximo de las imágenes a 600px (puedes ajustar este valor) */
-    max-height: 200px; /* Limita la altura máxima de las imágenes a 300px (puedes ajustar este valor) */
-    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+  .edu-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+    margin: 0 auto;
   }
   
   .more-info-btn {
@@ -86,3 +86,4 @@
   .more-info-btn:hover {
     background-color: #ff4040;
   }
+  

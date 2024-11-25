@@ -1,0 +1,79 @@
+.art-page {
+    font-family: 'Arial', sans-serif;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .art-header {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .art-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .art-authors,
+  .art-date {
+    font-size: 1rem;
+    color: #777777;
+  }
+  
+  .art-abstract-section,
+  .art-keywords-section,
+  .art-download-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .art-abstract-section h2,
+  .art-keywords-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #444444;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.3rem;
+  }
+  
+  .art-abstract {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555555;
+  }
+  
+  .art-keywords {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .art-keywords li {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 0.3rem 0.6rem;
+    margin: 0.3rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #333333;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #0056b3;
+  }
+  

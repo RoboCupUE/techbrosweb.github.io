@@ -3,84 +3,54 @@ import { Link } from 'react-router-dom';
 import './ArticlesPage.css';
 
 const ArticlesPage = () => {
-  // Lista de artículos (de momento 7, puedes agregar más fácilmente)
+  // List of articles with real information
   const articles = [
     {
-      id: 1,
-      title: "Introduction to Robotics",
-      summary: "A beginner's guide to robotics, covering the basics of what robotics is and how it works.",
-      route: "/article/1",
-      author: "John Doe",
-      year: 2023
+      id: '1',
+      title: 'User Experience Design for Social Robots: A Case Study in Integrating Embodiment',
+      summary:
+        'This article explores user experience design for social robots, focusing on the integration of embodiment, gestures, and dialogues in human-robot interaction.',
+      route: '/articles/1',
+      author: 'Ana Corrales-Paredes, Diego Ortega Sanz, María-José Terrón-López, Verónica Egido-García',
+      year: '2023',
     },
     {
-      id: 2,
-      title: "The Future of Artificial Intelligence",
-      summary: "An exploration of the potential of AI in various industries and its future impact on society.",
-      route: "/article/2",
-      author: "Jane Smith",
-      year: 2022
+      id: '2',
+      title: 'Integration of a Social Robot in a Pedagogical and Logopedic Intervention with Children: A Case Study',
+      summary:
+        'This study describes the use of a NAO social robot in pedagogical and logopedic therapy, focusing on the adaptation of specific behaviors for intervention with children.',
+      route: '/articles/2',
+      author: 'Verónica Egido-García, David Estévez, Ana Corrales-Paredes, María-José Terrón-López, Paloma-Julia Velasco-Quintana',
+      year: '2020',
     },
     {
-      id: 3,
-      title: "ROS2: The Next Generation of Robotics Frameworks",
-      summary: "An in-depth look at ROS2, its features, and why it is the future of robot software development.",
-      route: "/article/3",
-      author: "Carlos Ruiz",
-      year: 2021
+      id: '3',
+      title: 'Waymarking in Social Robots: Environment Signaling Using Human–Robot Interaction',
+      summary:
+        'This article investigates how social robots can use human-robot interaction to signal the environment and facilitate navigation in indoor spaces using RFID technology.',
+      route: '/articles/3',
+      author: 'Ana Corrales-Paredes, María Malfaz, Verónica Egido-García, Miguel A. Salichs',
+      year: '2021',
     },
-    {
-      id: 4,
-      title: "Advanced Robotics Algorithms",
-      summary: "A technical dive into advanced algorithms used in robotics for navigation, perception, and decision-making.",
-      route: "/article/4",
-      author: "Alice Johnson",
-      year: 2020
-    },
-    {
-      id: 5,
-      title: "Machine Learning for Robotics",
-      summary: "How machine learning is revolutionizing the world of robotics, from autonomous vehicles to industrial robots.",
-      route: "/article/5",
-      author: "Bob Lee",
-      year: 2023
-    },
-    {
-      id: 6,
-      title: "Ethical Considerations in Robotics",
-      summary: "A discussion on the ethical challenges of robotics, including issues like job displacement and robot rights.",
-      route: "/article/6",
-      author: "Eve Taylor",
-      year: 2021
-    },
-    {
-      id: 7,
-      title: "Building Robots with Open Source Tools",
-      summary: "A practical guide to building your first robot using open source tools and platforms.",
-      route: "/article/7",
-      author: "Michael Clark",
-      year: 2022
-    }
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  // Calcular el índice de inicio y fin de los artículos a mostrar en la página actual
+  // Pagination index calculation
   const indexOfLastArticle = currentPage * itemsPerPage;
   const indexOfFirstArticle = indexOfLastArticle - itemsPerPage;
   const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);
 
-  // Función para cambiar de página
+  // Page change handler
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Número total de páginas
+  // Total page count
   const pageCount = Math.ceil(articles.length / itemsPerPage);
 
-  // Volver al principio de la página cuando cambie la página
   useEffect(() => {
-    window.scrollTo(0, 0); // Vuelve al inicio
-  }, [currentPage]); // Dependencia en currentPage para activar cada vez que se cambia de página
+    window.scrollTo(0, 0); // Scroll to top when the page changes
+  }, [currentPage]);
 
   return (
     <div className="articles-page">
@@ -88,13 +58,12 @@ const ArticlesPage = () => {
       <p>In this section, you can explore a variety of articles about the projects developed by both past and present members of our club.</p>
 
       <div className="articles-list">
-        {currentArticles.map(article => (
+        {currentArticles.map((article) => (
           <div key={article.id} className="article-item">
             <h2>
               <Link to={article.route} className="article-title">{article.title}</Link>
             </h2>
             <p className="article-summary">{article.summary}</p>
-            {/* Información del autor y año */}
             <p className="article-author-year">
               <span className="article-author">{article.author}</span> | 
               <span className="article-year"> {article.year}</span>
@@ -103,9 +72,8 @@ const ArticlesPage = () => {
         ))}
       </div>
 
-      {/* Paginación */}
       <div className="pagination">
-        {Array.from({ length: pageCount }, (_, index) => index + 1).map(page => (
+        {Array.from({ length: pageCount }, (_, index) => index + 1).map((page) => (
           <button 
             key={page} 
             onClick={() => paginate(page)} 

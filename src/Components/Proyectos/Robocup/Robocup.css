@@ -1,0 +1,24 @@
+.robocup-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .robocup-container h1 {
+    color: #ff5757;
+    margin-bottom: 15px;
+  }
+  
+  .robocup-container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .robocup-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
