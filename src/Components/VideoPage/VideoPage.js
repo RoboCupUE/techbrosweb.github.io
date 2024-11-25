@@ -4,31 +4,24 @@ import './VideoPage.css';
 const videos = [
   {
     id: 'video1',
-    title: 'Introduction to Robotics',
-    url: 'https://www.youtube.com/watch?v=8IdBAysf-U4',
-    embedUrl: 'https://www.youtube.com/embed/8IdBAysf-U4',
-    description: 'This video offers a basic introduction to the world of robotics, explaining the fundamentals and applications of technology in various fields.',
+    title: 'Tech-bROS SLAM and Navigation with ROS2',
+    url: 'https://www.youtube.com/watch?v=XORwxXyIxAg',
+    embedUrl: 'https://www.youtube.com/embed/XORwxXyIxAg',
+    description: 'Discover how Tech-bROS implements SLAM and navigation using ROS2 for autonomous robots.',
   },
   {
     id: 'video2',
-    title: 'ASTI Challenge 2022',
+    title: 'ASTI Challenge 2022 Team Presentation',
     url: 'https://www.youtube.com/watch?v=i8GSPW2GofY',
     embedUrl: 'https://www.youtube.com/embed/i8GSPW2GofY',
-    description: 'Explore how robotics is revolutionizing the field of medicine, with applications ranging from assisted surgery to rehabilitation.',
-  },
-  {
-    id: 'video3',
-    title: 'Lorem Ipsum Video 3',
-    url: '',
-    embedUrl: '',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi eu nulla suscipit efficitur. Integer malesuada dolor non mi malesuada, vel condimentum eros varius.',
+    description: 'Relive the excitement of the ASTI Challenge 2022 and known the team members and their project.',
   },
   {
     id: 'video4',
-    title: 'Lorem Ipsum Video 4',
-    url: '',
-    embedUrl: '',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.',
+    title: '¡El Espíritu Navideño en Acción! Brazo Robótico Montando un Árbol de Navidad 3D',
+    url: 'https://www.youtube.com/watch?v=CBwBaF9_6d8',
+    embedUrl: 'https://www.youtube.com/embed/CBwBaF9_6d8',
+    description: 'Watch our robotic arm build a 3D Christmas tree with precision and holiday spirit!',
   },
 ];
 
@@ -44,19 +37,15 @@ const VideoPage = () => {
       <div className="video-grid">
         {videos.map((video) => (
           <div key={video.id} className="video-card">
-            {video.embedUrl ? (
-              <iframe
-                width="100%"
-                height="315"
-                src={video.embedUrl}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            ) : (
-              <div className="video-placeholder">Video not available</div>
-            )}
+            <iframe
+              width="100%"
+              height="315"
+              src={video.embedUrl}
+              title={video.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
             <h3>{video.title}</h3>
             <p className="video-description">{video.description}</p>
             {video.url && (
