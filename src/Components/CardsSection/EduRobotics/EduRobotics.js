@@ -7,17 +7,18 @@ const EduRobotics = () => {
       <div className="hero-edu-robotics">
         <h1>Educational Robotics</h1>
         <p>
-          Our educational robotics workshops bring cutting-edge technology to the classroom. 
-          Using platforms like LEGO Mindstorms, VEX Robotics, and Arduino, we empower the next generation of engineers.
+          Our educational robotics workshops offer hands-on learning experiences through a variety of exciting challenges. 
+          We specialize in Arduino-based courses, participate in the ASTI Challenge, and develop internal robotics projects. 
+          These activities empower students to become the next generation of engineers, capable of designing, programming, and innovating solutions in robotics.
         </p>
       </div>
       
       <div className="edu-section">
         <h2>Key Educational Topics</h2>
         <ul>
-          <li><strong>Robotics Design:</strong> Students learn to design and build robots using LEGO and VEX kits.</li>
-          <li><strong>Programming:</strong> Introduction to coding through block-based programming and Arduino-based projects.</li>
-          <li><strong>Teamwork and Innovation:</strong> Encouraging collaboration and creative problem solving during challenges and competitions.</li>
+          <li><strong>Arduino Programming:</strong> We teach students to design and program robots using Arduino platforms, enabling them to bring their creations to life.</li>
+          <li><strong>ASTI Challenge Participation:</strong> Students collaborate in the ASTI Challenge, applying their skills in real-world robotics competitions.</li>
+          <li><strong>Internal Projects:</strong> Our internal robotics projects encourage creativity, teamwork, and problem-solving through the design and development of custom robots.</li>
         </ul>
       </div>
       
