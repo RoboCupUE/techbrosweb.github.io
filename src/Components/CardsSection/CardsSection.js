@@ -41,7 +41,7 @@ function CardsSection() {
         
         <div className="card">
           <img 
-            src="./images/3d_ASTI.jpg" 
+            src="./images/ThreeD.jpeg" 
             alt="3D Design" 
             className="card-image" 
           />

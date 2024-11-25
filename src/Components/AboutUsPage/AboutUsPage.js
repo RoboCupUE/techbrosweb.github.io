@@ -35,15 +35,17 @@ const AboutUsPage = () => {
     },
     {
       name: 'Sergio Bemposta Rosende',
-      profession: 'Professor',
+      profession: 'Professor in the Department of Science, Computing, and Technology',
       email: 'sergio.bemposta@universidadeuropea.es',
       photo: './images/Member_5.jpg',
+      profileLink: 'https://portalcientifico.universidadeuropea.com/investigadores/156929/detalle',
     },
     {
       name: 'Ana del Valle Corrales Paredes',
-      profession: 'Professor',
+      profession: 'Professor and PhD MSc in Robotics and Automation',
       email: 'anadelvalle.corrales@universidadeuropea.es',
-      photo: '/images/michael.jpg',
+      photo: './images/Member_7.jpeg',
+      profileLink: 'https://portalcientifico.universidadeuropea.com/investigadores/156366/detalle',
     },
   ];
 
@@ -53,7 +55,8 @@ const AboutUsPage = () => {
         <div className="hero-content">
           <h1>Welcome to Tech-bROS</h1>
           <p>
-            A dynamic team of students, professionals, and educators united by our passion for robotics and the potential of ROS2 technology.
+            A dynamic team of students, professionals, and educators united by our passion 
+            for robotics and the potential of ROS2 technology.
           </p>
         </div>
       </section>
@@ -61,24 +64,33 @@ const AboutUsPage = () => {
       <section className="about-us-overview">
         <h2>About Us</h2>
         <p>
-          At Tech-bROS, our mission is to develop intelligent robots that seamlessly interact with humans and solve real-world problems.
-          While we are still growing our expertise in ROS2, we are deeply committed to mastering this transformative technology. Through hands-on projects and teamwork,
-          we are building the skills and knowledge needed to make meaningful contributions to the robotics community in the near future.
+          At Tech-bROS, our mission is to develop intelligent robots that seamlessly interact with 
+          humans and solve real-world problems.
+          While we are still growing our expertise in ROS2, 
+          we are deeply committed to mastering this transformative technology. 
+          Through hands-on projects and teamwork,
+          we are building the skills and knowledge needed to make meaningful contributions 
+          to the robotics community in the near future.
         </p>
         <p>
-          We are dedicated to exploring and mastering ROS2 while creating meaningful contributions to robotics research and development.
-          With a shared vision of advancing technology, we embrace every challenge as an opportunity to grow and make an impact.
+          We are dedicated to exploring and mastering ROS2 while creating meaningful contributions 
+          to robotics research and development.
+          With a shared vision of advancing technology, 
+          we embrace every challenge as an opportunity to grow and make an impact.
         </p>
       </section>
 
       <section className="about-us-mission">
         <h2>What Drives Us</h2>
         <p>
-          At Tech-bROS, our mission is to develop intelligent robots that seamlessly interact with humans and solve real-world problems.
-          Our passion lies in exploring cutting-edge robotics technologies, with ROS2 at the core of our learning and experimentation.
+          At Tech-bROS, our mission is to develop intelligent robots that seamlessly interact with 
+          humans and solve real-world problems.
+          Our passion lies in exploring cutting-edge robotics technologies, 
+          with ROS2 at the core of our learning and experimentation.
         </p>
         <p>
-          Through collaborative projects and hands-on experience, we aim to inspire innovation and contribute to the growing robotics community.
+          Through collaborative projects and hands-on experience, we aim to inspire innovation 
+          and contribute to the growing robotics community.
         </p>
       </section>
 
@@ -90,7 +102,8 @@ const AboutUsPage = () => {
           <li>Researching social robotics to improve human-robot interaction.</li>
         </ul>
         <p>
-          These projects highlight our dedication to applying robotics in meaningful ways, blending technical expertise with creativity to solve modern challenges.
+          These projects highlight our dedication to applying robotics in meaningful ways, 
+          blending technical expertise with creativity to solve modern challenges.
         </p>
       </section>
 
@@ -103,6 +116,14 @@ const AboutUsPage = () => {
               <h3>{member.name}</h3>
               <p>{member.profession}</p>
               <a href={`mailto:${member.email}`}>{member.email}</a>
+              {member.profileLink && (
+                <div className="profile-link">
+                  <span>Research Profile:</span>{' '}
+                  <a href={member.profileLink} target="_blank" rel="noopener noreferrer">
+                    View Profile
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -111,8 +132,8 @@ const AboutUsPage = () => {
       <section className="join-us-section">
         <h2>Join Us</h2>
         <p>
-          We’re just getting started! If you’re as passionate about robotics and ROS2 as we are, we’d love to hear from you.
-          Together, we can shape the future of robotics.
+          We’re just getting started! If you’re as passionate about robotics and ROS2 as we are, 
+          we’d love to hear from you. Together, we can shape the future of robotics.
         </p>
         <div className='contact-button-wrapper'>
           <a href="mailto:clubroboticsuem@gmail.com" className="contact-button">

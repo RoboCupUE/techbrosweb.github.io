@@ -8,7 +8,7 @@ const FeaturedProjectsPage = () => {
       <section className="hero-featured-projects">
         <h1>Featured Projects at Robotics Club</h1>
         <p>
-          At UEM Robotics Club, we are constantly working on innovative robotics projects that will shape the future of technology. Here are some of our current projects.
+          At UEM Robotics Club, we are dedicated to developing innovative robotics projects that have a real-world impact. Below are some of our current initiatives.
         </p>
       </section>
 
@@ -17,10 +17,10 @@ const FeaturedProjectsPage = () => {
         <div className="project-details">
           <div className="project-description">
             <p>
-              Our team is preparing to compete in the ASTI Challenge, a prestigious event in the field of robotics, which will take place next May.
+              Our team is preparing for the ASTI Challenge 2025, a prestigious competition where we’ll develop autonomous systems to tackle complex tasks in a competitive environment.
             </p>
             <p>
-              The competition will require us to develop autonomous systems capable of performing specific tasks in a challenging environment.
+              This challenge will test our skills in robotics, focusing on autonomy, precision, and adaptability.
             </p>
           </div>
           <div className="project-image">
@@ -35,7 +35,7 @@ const FeaturedProjectsPage = () => {
         <div className="project-details">
           <div className="project-description">
             <p>
-              We host regular Arduino workshops aimed at introducing beginners to the world of robotics and electronics.
+              We offer Arduino workshops designed to introduce beginners to the basics of robotics and electronics, helping them gain hands-on experience with building and programming simple robots.
             </p>
           </div>
           <div className="project-image">
@@ -50,7 +50,7 @@ const FeaturedProjectsPage = () => {
         <div className="project-details">
           <div className="project-description">
             <p>
-              Our internal competition focuses on designing and building MiniSumo robots that will compete against each other in a specially designed arena.
+              We’re designing MiniSumo robots for an internal competition, where robots compete to push each other out of a ring. This project enhances our skills in robot design, programming, and sensor integration.
             </p>
           </div>
           <div className="project-image">
@@ -65,7 +65,10 @@ const FeaturedProjectsPage = () => {
         <div className="project-details">
           <div className="project-description">
             <p>
-              Our biggest goal is to participate in the RoboCup Liga Home 2025, where we aim to demonstrate the capabilities of social robotics.
+              Our primary goal is to participate in RoboCup Liga Home 2025, where we will develop a single robot equipped with a TB4 that can autonomously solve a series of tasks set in a home environment.
+            </p>
+            <p>
+              This project challenges us to design a robot capable of performing real-world tasks such as navigation, object manipulation, and human-robot interaction, all while adapting to a dynamic environment.
             </p>
           </div>
           <div className="project-image">

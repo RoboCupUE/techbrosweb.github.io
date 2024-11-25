@@ -16,7 +16,7 @@ const ThreeD = () => {
         <li><strong>Collaborative Design:</strong> Partnering with engineers and educators to develop functional robotic solutions.</li>
       </ul>
       <img 
-        src="./images/.jpg" 
+        src="./images/ThreeD_ASTI.jpg" 
         alt="3D printing and design process in action" 
         className="three-d-image"
       />

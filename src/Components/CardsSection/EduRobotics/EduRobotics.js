@@ -1,39 +1,35 @@
 import React from 'react';
-import './EduRobotics.css';
+import './EduRobotics.css'; 
 
 const EduRobotics = () => {
   return (
     <div className="edu-robotics-page">
-      <section className="hero-edu-robotics">
+      <div className="hero-edu-robotics">
         <h1>Educational Robotics</h1>
         <p>
-          Dive into the exciting world of educational robotics, where technology meets learning to inspire innovation and creativity among students.
+          Our educational robotics workshops bring cutting-edge technology to the classroom. 
+          Using platforms like LEGO Mindstorms, VEX Robotics, and Arduino, we empower the next generation of engineers.
         </p>
-      </section>
-
-      <section className="edu-section">
-        <h2>Projects and Initiatives</h2>
-        <div className="edu-details">
-          <div className="edu-description">
-            <p>
-              Our educational robotics initiatives include hands-on workshops and participation in international competitions like the ASTI Challenge.
-            </p>
-            <p>
-              We focus on building interactive learning environments that teach coding, engineering, and robotics to the next generation.
-            </p>
-          </div>
-         <div className="edu-image">
-            <img src="./images/.jpg" alt="Educational Robotics" />
-          </div>
-        </div>
-      </section>
-
-      <section className="edu-section">
-        <h2>Learning Platforms</h2>
-        <p>
-          Using platforms like LEGO Mindstorms, Arduino, and Raspberry Pi, we make robotics accessible and engaging for all skill levels.
+      </div>
+      
+      <div className="edu-section">
+        <h2>Key Educational Topics</h2>
+        <ul>
+          <li><strong>Robotics Design:</strong> Students learn to design and build robots using LEGO and VEX kits.</li>
+          <li><strong>Programming:</strong> Introduction to coding through block-based programming and Arduino-based projects.</li>
+          <li><strong>Teamwork and Innovation:</strong> Encouraging collaboration and creative problem solving during challenges and competitions.</li>
+        </ul>
+      </div>
+      
+      <div className="edu-image">
+        <img 
+          src="./images/TeamASTI.jpg" 
+          alt="Educational Robotics Workshop"
+        />
+        <p className="image-caption">
+          This is the team of Edition VII (7) 2023-2024, Burgos, Spain.
         </p>
-      </section>
+      </div>
     </div>
   );
 };

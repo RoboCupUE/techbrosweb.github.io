@@ -160,10 +160,12 @@
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #ff5757;
   }
   
   .contact-button:hover {
-    background-color: #ff3838;
+    background-color: #fff;
+    color: #ff5757;
     transform: translateY(-2px);
   }
   

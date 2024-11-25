@@ -24,9 +24,16 @@ const MobRobotics = () => {
       
       <div className="mob-image">
         <img 
-          src="./images/.jpg" 
+          src="./images/robocup.jpg" 
           alt="Participants in a ROS2 mobile robotics workshop" 
-          className="mob-robotics-image"
+        />
+        <img 
+          src="./images/kobuki.mp4" 
+          alt="Kobuki robot demonstration"
+        />
+        <img 
+          src="./images/kobuki.jpg" 
+          alt="Participants working with the Kobuki robot"
         />
       </div>
     </div>

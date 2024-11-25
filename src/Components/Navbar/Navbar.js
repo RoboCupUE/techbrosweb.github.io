@@ -64,7 +64,7 @@ function Navbar() {
           
           {}
           {location.pathname !== '/articles' && (
-            <Link to="/articles" className="navbar-button" onClick={() => setIsOpen(false)}>Articles</Link>
+            <Link to="/articles" className="navbar-button" onClick={() => setIsOpen(false)}>Publications</Link>
           )}
 
           {}

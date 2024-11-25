@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './ArticlesPage.css';
 
 const ArticlesPage = () => {
-  // List of articles with real information
   const articles = [
     {
       id: '1',
@@ -37,15 +36,12 @@ const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  // Pagination index calculation
   const indexOfLastArticle = currentPage * itemsPerPage;
   const indexOfFirstArticle = indexOfLastArticle - itemsPerPage;
   const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);
 
-  // Page change handler
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Total page count
   const pageCount = Math.ceil(articles.length / itemsPerPage);
 
   useEffect(() => {
@@ -54,8 +50,24 @@ const ArticlesPage = () => {
 
   return (
     <div className="articles-page">
-      <h1>Articles</h1>
-      <p>In this section, you can explore a variety of articles about the projects developed by both past and present members of our club.</p>
+      <h1>Publications</h1>
+      <p>
+        Welcome to our Publications section. Here, you will find a carefully curated selection of 
+        articles highlighting significant research and innovative projects. 
+        These works represent the commitment and expertise of both current and former team members, 
+        focusing on advancements in robotics, automation, and human-robot interaction.
+      </p>
+
+      <div className="university-research-link">
+        <a 
+          href="https://portalcientifico.universidadeuropea.com/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="research-portal-button"
+        >
+          Visit the University Research Portal
+        </a>
+      </div>
 
       <div className="articles-list">
         {currentArticles.map((article) => (

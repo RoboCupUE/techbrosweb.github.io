@@ -40,14 +40,18 @@
   
   .three-d-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  
   
   .three-d-image:hover {
     transform: scale(1.05);
