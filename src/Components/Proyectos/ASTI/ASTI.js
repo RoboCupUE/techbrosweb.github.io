@@ -12,12 +12,12 @@ const ASTI = () => {
         The competition is structured in multiple phases, starting with regional semifinals held in cities like Valencia, Madrid, and Zaragoza. If successful, teams progress to the national final in Burgos, where the best projects compete. Participants face a series of challenges that test their skills in areas like artificial intelligence, system integration, and navigation. The goal is to create robots that can autonomously solve real-world problems, such as navigating complex environments and performing specific tasks.
       </p>
       <p>
-        This challenge not only enhances our technical expertise but also promotes teamwork and project management skills. It provides us with an invaluable opportunity to apply our knowledge in a competitive, real-world scenario and work alongside other passionate students to push the boundaries of robotics​
+        This challenge not only enhances our technical expertise but also promotes teamwork and project management skills. It provides us with an invaluable opportunity to apply our knowledge in a competitive, real-world scenario and work alongside other passionate students to push the boundaries of robotics​.
       </p>
       <p>
         The challenge involves solving real-world problems, enhancing our technical knowledge, and fostering teamwork. The competition will test our skills in AI, system integration, and autonomous navigation.
       </p>
-      <img src="./images/TeamASTI.jpg" alt="ASTI Challenge" className="asti-image" />
+      <img src="/techbrosweb.github.io/images/TeamASTI.jpg" alt="ASTI Challenge" className="asti-image" />
     </div>
   );
 };

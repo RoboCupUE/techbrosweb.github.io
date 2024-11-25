@@ -5,19 +5,19 @@
   line-height: 1.6;
   font-family: 'Oswald', sans-serif;
   color: #333;
+  text-align: justify;
 }
 
 .asti-container h1 {
   color: #ff5757;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .asti-container p {
   font-size: 18px;
   margin-bottom: 15px;
-  text-align: justify;
   line-height: 1.8;
 }
 

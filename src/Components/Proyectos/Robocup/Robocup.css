@@ -11,7 +11,7 @@
   color: #ff5757; 
   font-size: 2.5rem;
   margin-bottom: 20px; 
-  text-align: center; 
+  text-align: left; 
 }
 
 .robocup-container p {
@@ -22,8 +22,8 @@
 }
 
 .robocup-image {
-  width: 100%;
-  max-width: 600px;
+  width: 400px;
+  max-width: 300px;
   border-radius: 8px;
   margin-top: 20px;
   display: block;

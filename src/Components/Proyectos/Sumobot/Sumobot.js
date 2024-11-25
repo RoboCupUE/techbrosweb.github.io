@@ -11,7 +11,7 @@ const Sumobot = () => {
       <p>
         Participants gain hands-on experience with robotics, building mechanical structures, integrating various sensors, and programming custom behaviors. It's a great way to blend learning and friendly competition.
       </p>
-      <img src="./images/minisumo.jpg" alt="MiniSumo Robot" className="sumobot-image" />
+      <img src="/techbrosweb.github.io/images/minisumo.jpg" alt="MiniSumo Robot" className="sumobot-image" />
     </div>
   );
 };

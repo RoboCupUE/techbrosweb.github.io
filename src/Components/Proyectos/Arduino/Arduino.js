@@ -13,7 +13,7 @@ const Arduino = () => {
         These workshops are designed to foster creativity and teach essential skills in programming and electronics.
         Our sessions provide hands-on experience and support for everyone from beginners to advanced users, building robots, creating smart devices, and experimenting with sensors.
       </p>
-      <img src="./images/arduinoWorkshops.jpg" alt="Arduino Workshop" className="arduino-image" />
+      <img src="/techbrosweb.github.io/images/arduinoWorkshops.jpg" alt="Arduino Workshop" className="arduino-image" />
     </div>
   );
 };
