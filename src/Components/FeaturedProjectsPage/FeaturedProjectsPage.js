@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Necesitamos el componente Link para navegar entre páginas
+import { Link } from 'react-router-dom';
 import './FeaturedProjectsPage.css';
 
 const FeaturedProjectsPage = () => {

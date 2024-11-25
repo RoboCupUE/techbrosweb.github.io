@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
+import { Link } from 'react-router-dom'; 
 import './CardsSection.css';
 
 function CardsSection() {
@@ -7,7 +7,6 @@ function CardsSection() {
     <section className="cards-section">
       <h2 className="cards-title">Explore Our Areas of Expertise</h2>
       <div className="cards-container">
-        {/* Educational Robotics */}
         <div className="card">
           <img 
             src="./images/MiniLabASTI.jpg" 
@@ -23,7 +22,6 @@ function CardsSection() {
           </Link>
         </div>
 
-        {/* Mobile Robotics */}
         <div className="card">
           <img 
             src="./images/MobileRobotics.png" 
@@ -40,8 +38,7 @@ function CardsSection() {
             Learn More
           </Link>
         </div>
-
-        {/* 3D Design */}
+        
         <div className="card">
           <img 
             src="./images/3d_ASTI.jpg" 

@@ -61,14 +61,15 @@
   }
   
   .project-image img {
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor, pero sin exceder el 100% de su tamaño original */
-    height: auto; /* Mantiene la relación de aspecto original de la imagen */
-    max-width: 300px; /* Limita el ancho máximo de las imágenes a 600px (puedes ajustar este valor) */
-    max-height: 200px; /* Limita la altura máxima de las imágenes a 300px (puedes ajustar este valor) */
-    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    width: 100%; 
+    height: auto; 
+    max-width: 300px; 
+    max-height: 200px; 
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+    margin: 0 auto; 
+    
   }
   
   .more-info-btn {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 import './Navbar.css';
 
 function Navbar() {
@@ -11,7 +11,6 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  // Cerrar el menú al hacer clic fuera
   useEffect(() => {
     if (isOpen) {
       const handleClickOutside = (event) => {
@@ -27,14 +26,12 @@ function Navbar() {
     }
   }, [isOpen]);
 
-  // Función para recargar la página cuando el usuario haga clic en "Home"
   const handleHomeClick = () => {
     navigate('/'); 
     window.location.reload(); 
     setIsOpen(false); 
   };
 
-  // Función para manejar el clic en el logo
   const handleLogoClick = () => {
     navigate('/'); 
     window.location.reload(); 

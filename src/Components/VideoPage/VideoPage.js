@@ -37,7 +37,9 @@ const VideoPage = () => {
     <div className="video-page-container">
       <h1>Explore Our Videos</h1>
       <p className="video-page-description">
-        Here, you can watch some of the most interesting videos about robotics, covering topics like introductions to robotics, medical applications, autonomous robots, and more.
+        Here, you can watch some of the most interesting videos about robotics, 
+        covering topics like introductions to robotics, medical applications, 
+        autonomous robots, and more.
       </p>
       <div className="video-grid">
         {videos.map((video) => (

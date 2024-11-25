@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './Art_Page.css';
 
-// Base de datos de artículos con autores y abstracts reales
 const articles = [
   {
     id: '1',
@@ -49,7 +48,6 @@ const Art_Page = () => {
 
   return (
     <div className="art-page">
-      {/* Encabezado del artículo */}
       <header className="art-header">
         <h1 className="art-title">{article.title}</h1>
         <p className="art-authors">
@@ -57,13 +55,11 @@ const Art_Page = () => {
         </p>
       </header>
 
-      {/* Resumen del artículo */}
       <section className="art-abstract-section">
         <h2>Abstract</h2>
         <p className="art-abstract">{article.abstract}</p>
       </section>
-
-      {/* Palabras clave */}
+      
       <section className="art-keywords-section">
         <h2>Keywords</h2>
         <ul className="art-keywords">
@@ -73,15 +69,14 @@ const Art_Page = () => {
         </ul>
       </section>
 
-      {/* Botón de descarga */}
       <section className="art-download-section">
         <a
-          href={article.journalUrl}
+          href={article.journalUrl} 
           target="_blank"
           rel="noopener noreferrer"
-          className="download-btn"
+          className="read-article-btn" 
         >
-          Download Full Text (PDF)
+          Read Full Article
         </a>
       </section>
     </div>

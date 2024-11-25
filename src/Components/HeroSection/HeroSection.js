@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  // Importa Link
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -14,7 +14,7 @@ function HeroSection() {
           fostering creativity, collaboration, and innovation among our university members.
         </p>
         <div className='hero-buttons'>
-          <Link to='/featured-projects' className='hero-button'>Featured Projects</Link> {/* Usamos Link en lugar de <a> */}
+          <Link to='/featured-projects' className='hero-button'>Featured Projects</Link>
         </div>
       </div>
     </div>

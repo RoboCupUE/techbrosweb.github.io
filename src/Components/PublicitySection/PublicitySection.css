@@ -1,7 +1,7 @@
 .publicity-section {
     width: 100%;
-    height: 400px;  /* Ajusta la altura según sea necesario */
-    background-color: #f0f0f0; /* Fondo gris claro */
+    height: 400px; 
+    background-color: #f0f0f0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
   
   .publicity-slide {
     width: 100%;
-    height: 80%;  /* Ajusta el tamaño del área del slide */
+    height: 80%;  
     position: relative;
     display: flex;
     justify-content: center;
@@ -30,17 +30,17 @@
   .publicity-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* Asegura que la imagen se ajuste completamente sin recortes */
-    opacity: 0;  /* Empieza oculta */
-    transition: opacity 1s ease;  /* Transición suave para que aparezca */
+    object-fit: contain;  
+    opacity: 0;  
+    transition: opacity 1s ease; 
   }
   
   .publicity-image.loaded {
-    opacity: 1;  /* La imagen aparece cuando se ha cargado */
+    opacity: 1;  
   }
   
   .publicity-image.loading {
-    filter: blur(10px);  /* Aplica un desenfoque mientras la imagen se carga */
+    filter: blur(10px);  
   }
   
   .publicity-video {

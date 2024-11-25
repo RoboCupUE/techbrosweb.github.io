@@ -1,5 +1,5 @@
 import React from 'react';
-import './MobRobotics.css';  // Asegúrate de que el archivo CSS esté correctamente importado
+import './MobRobotics.css'; 
 
 const MobRobotics = () => {
   return (

@@ -40,16 +40,15 @@ const PublicitySection = React.memo(() => {
         if (slide.type === 'image') {
           const img = new Image();
           img.src = slide.src;
-          img.onload = () => resolve(slide.src); // Resolve when image is loaded
-          img.onerror = () => reject(new Error(`Failed to load image: ${slide.src}`)); // Error handling
+          img.onload = () => resolve(slide.src);
+          img.onerror = () => reject(new Error(`Failed to load image: ${slide.src}`)); 
         }
       });
     });
 
-    // Wait for all images to preload
     Promise.all(promises)
       .then((loadedImages) => {
-        setLoadedImages(loadedImages); // Save loaded images
+        setLoadedImages(loadedImages); 
       })
       .catch((error) => {
         console.error("Error loading images", error);
@@ -60,10 +59,10 @@ const PublicitySection = React.memo(() => {
     preloadImages();
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      setImageLoaded(false); // Reset image loaded state
+      setImageLoaded(false); 
     }, 7000);
 
-    return () => clearInterval(interval); // Clean up interval
+    return () => clearInterval(interval); 
   }, [slides.length, preloadImages]);
 
   const handleImageLoad = () => {
@@ -80,7 +79,7 @@ const PublicitySection = React.memo(() => {
               alt={slides[currentIndex].alt}
               className={`publicity-image ${imageLoaded ? 'loaded' : 'loading'}`}
               onLoad={handleImageLoad}
-              style={{ display: imageLoaded ? 'block' : 'none' }} // Hide image until loaded
+              style={{ display: imageLoaded ? 'block' : 'none' }}
             />
           ) : (
             <video className="publicity-video" autoPlay loop muted>

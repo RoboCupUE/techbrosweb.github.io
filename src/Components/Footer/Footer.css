@@ -24,7 +24,7 @@
   .footer-logo {
     width: 60px;
     height: auto;
-    margin-right: 10px; /* Espacio entre el logo y el texto */
+    margin-right: 10px; 
   }
   
   .footer-info {
@@ -45,6 +45,6 @@
   }
   
   .footer-icon:hover {
-    color: #0077b5; /* Cambia el color de hover si es necesario */
+    color: #0077b5;
   }
   
